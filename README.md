@@ -26,6 +26,6 @@ Artists tab? - nesto o ljudima
 sto popraviti:
 navigacija - da se mijenja aktivna, po ruti ///// cinemaholic naslov
 title cinemaholic - da se ne mijenja po svakoj stranici
-za svaki poster dodat fallback
+za svaki poster dodat fallback na svim dijelovima aplikacije
 opis na home pageu ode ispod
 popraviti kad ljudi nemaju sliku, opis, filmove, serije //// takoder kad im je predug opis

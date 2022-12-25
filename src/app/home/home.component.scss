@@ -13,16 +13,7 @@
   width: 90%;
   margin: 0 5%;
 }
-.titleBar{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #FBFBF2;
-}
+
 .titleBar button {
   border: none;
   outline: none;
@@ -108,14 +99,6 @@ img {
   flex-direction: row;
   justify-content: center;
   min-height: 500px;
-}
-.arrows{
-  user-select: none;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover{
-    color: #FD515A;
-  }
 }
 .artistBox{
   width: 25%;

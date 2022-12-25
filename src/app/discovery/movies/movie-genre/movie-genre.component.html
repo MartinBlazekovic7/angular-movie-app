@@ -1,0 +1,19 @@
+<div class="genre">
+  <div class="titleBar">
+    <h2>{{genre.name}}</h2>
+    <div>
+      <a class="arrows" (click)="nextSlide()"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+      <a class="arrows" (click)="prevSlide()"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
+    </div>
+  </div>
+  <div class="displayMovies">
+    <div
+      [@inOutAnimation]
+      class="movieBox"
+      *ngFor="let movie of movies | slice:currPage:currPage+5"
+      [routerLink]="['/movie/'+movie.id]">
+      <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" alt="">
+      <img id="placeholder" *ngIf="!movie.poster_path" src="../../../../assets/images/posterPlaceholder.jpg" alt="">
+    </div>
+  </div>
+</div>

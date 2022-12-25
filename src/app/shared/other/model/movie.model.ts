@@ -45,11 +45,6 @@ export class MovieDetails {
   production_countries: ProductionCountry[];
 }
 
-export class Genre {
-  id: number;
-  name: String;
-}
-
 export class MovieTrailer {
   type: String;
   site: String;
@@ -97,4 +92,13 @@ export class Provider {
   provider_id: number;
   provider_name: String;
   display_priority: String;
+}
+
+export class GenreResponse {
+  genres: Genre[];
+}
+
+export class Genre {
+  id: number;
+  name: String;
 }

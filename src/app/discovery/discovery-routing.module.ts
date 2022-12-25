@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MainComponent} from "./main/main.component";
 import {MoviesComponent} from "./movies/movies.component";
 import {ShowsComponent} from "./shows/shows.component";
 
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
-  {path: 'home', component: MoviesComponent},
+  {path: '', redirectTo: 'movies', pathMatch: 'full'},
+  {path: 'movies', component: MoviesComponent},
   {path: 'shows', component: ShowsComponent}
 ];
 

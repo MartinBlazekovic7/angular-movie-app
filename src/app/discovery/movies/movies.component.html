@@ -1,1 +1,7 @@
-<p>movies works!</p>
+<nav class="topRatedNavbar">
+  <div [routerLink]="['movies']" class="topRatedSelected">Movies</div>
+  <div [routerLink]="['../shows']">Shows</div>
+</nav>
+<div [@inOutAnimation] *ngFor="let genre of genres">
+  <app-movie-genre [genre]="genre"></app-movie-genre>
+</div>
