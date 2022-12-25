@@ -1,0 +1,58 @@
+<div class="fullNavbar">
+  <div class="content">
+    <div id="title">
+      <h2>CINEMAHOLIC</h2>
+    </div>
+    <div class="routes">
+      <div (click)="selectedOption = 'Home'; click()"
+           class="route"
+           [routerLink]="['home']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">home</span>
+        <h2>Home</h2>
+      </div>
+      <div (click)="selectedOption = 'Discovery'; click()"
+           class="route"
+           [routerLink]="['discovery']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">explore</span>
+        <h2>Discovery</h2>
+      </div>
+      <div (click)="selectedOption = 'Search'; click()"
+           class="route"
+           [routerLink]="['search']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">search</span>
+        <h2>Search</h2>
+      </div>
+      <div (click)="selectedOption = 'Upcoming'; click()"
+           class="route"
+           [routerLink]="['upcoming']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">timer</span>
+        <h2>Upcoming</h2>
+      </div>
+      <div (click)="selectedOption = 'Top Rated'; click()"
+           class="route"
+           [routerLink]="['toprated']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">local_fire_department</span>
+        <h2>Top Rated</h2>
+      </div>
+      <div (click)="selectedOption = 'Artists'; click()"
+           class="route"
+           [routerLink]="['artists']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">theater_comedy</span>
+        <h2>Artists</h2>
+      </div>
+      <div (click)="selectedOption = 'Favorites'; click()"
+           class="route"
+           [routerLink]="['favorites']"
+           [routerLinkActive]="['selected']">
+        <span class="material-symbols-outlined">favorite</span>
+        <h2>Favorites</h2>
+      </div>
+    </div>
+  </div>
+</div>

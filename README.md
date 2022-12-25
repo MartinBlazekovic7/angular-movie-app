@@ -1,27 +1,31 @@
-# AngularMovieApp
+  1bdf07a878e60c35ec4b72268c4a797e
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
-## Development server
+HOME - jedna stranica, welcome to the home of cinema and tv, upcoming movies, top rated movies, upcoming shows, top rated shows, top rated artists
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Discovery - dva taba movies and shows, zanrovi, mini search
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Search - cisti search po imenu //// preko localStoragea spremiti searchTerm
 
-## Build
+Upcoming - novi filmovi ili serije, mogucnost stavljanja datuma izlaska
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Top Rated - lista top rated filmova, pipeovi, sortirani, pagination
 
-## Running unit tests
+Favorites - dodani favoriti, posebno filmovi, posebno serije
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Movie/id - detalji o filmu ////// na cast & crew dodati gumb show all, otvara novu komponentu movie/id/cast&crew i pRikazuje sve to
 
-## Running end-to-end tests
+Show/id - detalji o seriji ////// dodati sezone
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+artist/id - detalji o ljudima 
 
-## Further help
+Artists tab? - nesto o ljudima
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+sto popraviti:
+navigacija - da se mijenja aktivna, po ruti ///// cinemaholic naslov
+title cinemaholic - da se ne mijenja po svakoj stranici
+za svaki poster dodat fallback
+opis na home pageu ode ispod
+popraviti kad ljudi nemaju sliku, opis, filmove, serije //// takoder kad im je predug opis

@@ -1,0 +1,19 @@
+<nav class="topRatedNavbar">
+  <div [routerLink]="['../movies']">Movies</div>
+  <div [routerLink]="['shows']" class="topRatedSelected">Shows</div>
+</nav>
+<div class="topRatedList" [@inOutAnimation]>
+  <div class="topRatedMovie"
+       *ngFor="let show of shows; index as i"
+  >
+    <img src="https://image.tmdb.org/t/p/original{{show.poster_path}}" alt="" [routerLink]="['../../show/'+show.id]">
+    <div>
+      <h2 [routerLink]="['../../show/'+show.id]">{{i+1}}. {{show.name}} ({{show?.first_air_date.slice(0, 4)}})</h2>
+      <h2>{{show.vote_average}}</h2>
+    </div>
+  </div>
+</div>
+<div class="buttonDiv">
+  <button class="redButton" (click)="loadMore()">SHOW MORE</button>
+</div>
+

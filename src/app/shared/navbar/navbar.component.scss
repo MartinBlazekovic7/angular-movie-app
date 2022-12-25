@@ -1,0 +1,47 @@
+.fullNavbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #1F2326;
+  width: 100%;
+}
+#title {
+  padding-top: 25px;
+  text-align: center;
+  font-family: BebasNeue, serif;
+  font-size: 2rem;
+  color: #FBFBF2;
+}
+.routes{
+  padding-top: 25px;
+  color: #FBFBF2;
+  font-family: "Quicksand SemiBold", serif;
+}
+
+.route {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  margin: 10% 0;
+  width: 100%;
+  padding-left: 10%;
+  color: #adadad;
+}
+.route span {
+  padding-right: 5%;
+}
+.route:hover {
+  color: #FBFBF2;
+}
+
+.selected {
+  color: #FBFBF2;
+  border-right: 5px solid #FD515A;
+}
+.selected span{
+  color: #FD515A;
+}
+
