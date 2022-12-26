@@ -125,3 +125,55 @@ img {
   overflow: hidden;
   user-select: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .titleBar {
+    h2 {
+      font-size: 14px;
+    }
+    button {
+      display: none;
+    }
+  }
+
+  .slideDiv{
+    height: 170px;
+    img {
+      height: 100%;
+    }
+  }
+  .desc{
+    height: 30%;
+    top: 70%;
+    h1 {
+      font-size: 14px;
+    }
+    p {
+      display: none;
+    }
+  }
+  .displayArtists{
+    flex-direction: column;
+  }
+  .artistBox{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .artistDesc{
+    h2 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .prevButton, .nextButton {
+    opacity: 1;
+    &:hover {
+      background: none;
+    }
+  }
+  .nextButton {
+    left: 94%;
+  }
+}

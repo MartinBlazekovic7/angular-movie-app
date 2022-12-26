@@ -27,3 +27,12 @@ app-navbar {
 app-footer{
   min-height: 20vh;
 }
+
+@media only screen and (max-width: 600px) {
+  .sidebar{
+    display: none;
+  }
+  .middle{
+    width: 85%;
+  }
+}

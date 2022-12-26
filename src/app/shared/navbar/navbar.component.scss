@@ -45,3 +45,18 @@
   color: #FD515A;
 }
 
+@media only screen and (max-width: 600px) {
+  .fullNavbar{
+    h2 {
+      display: none;
+    }
+  }
+  .route{
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .selected{
+    border: none;
+  }
+}
+
