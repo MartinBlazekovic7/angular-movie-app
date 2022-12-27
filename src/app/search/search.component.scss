@@ -75,3 +75,15 @@ form input{
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .searchBox {
+
+    width: 80%;
+    margin: 30px auto;
+    input {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}

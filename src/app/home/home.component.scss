@@ -98,6 +98,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   min-height: 500px;
 }
 .artistBox{
@@ -125,8 +126,55 @@ img {
   overflow: hidden;
   user-select: none;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1450px) {
+  .slideDiv{
+    height: 400px;
+  }
+  .desc{
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .slideDiv{
+    height: 350px;
+  }
+  .desc {
+    height: 40%;
+    top: 60%;
+  }
+  .artistDesc{
+    h2 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .slideDiv{
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .slideDiv{
+    height: 250px;
+  }
+  .desc{
+    h1 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
   .titleBar {
     h2 {
       font-size: 14px;
@@ -139,7 +187,7 @@ img {
   .slideDiv{
     height: 170px;
     img {
-      height: 100%;
+
     }
   }
   .desc{
@@ -152,21 +200,6 @@ img {
       display: none;
     }
   }
-  .displayArtists{
-    flex-direction: column;
-  }
-  .artistBox{
-    width: 80%;
-    margin: 0 auto;
-  }
-  .artistDesc{
-    h2 {
-      font-size: 14px;
-    }
-    p {
-      font-size: 12px;
-    }
-  }
   .prevButton, .nextButton {
     opacity: 1;
     &:hover {
@@ -175,5 +208,27 @@ img {
   }
   .nextButton {
     left: 94%;
+  }
+  .displayArtists{
+    flex-direction: column;
+    min-height: 1000px;
+  }
+  .artistBox{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .artistDesc{
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .slideDiv img {
+    height: 100%;
   }
 }

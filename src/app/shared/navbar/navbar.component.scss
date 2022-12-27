@@ -44,10 +44,21 @@
 .selected span{
   color: #FD515A;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1450px) {
+  #title h2{
+    font-size: 26px;
+  }
   .fullNavbar{
     h2 {
+      transition: 0.3s;
+      font-size: 16px;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .fullNavbar{
+    h2 {
+      transition: 0.3s;
       display: none;
     }
   }
