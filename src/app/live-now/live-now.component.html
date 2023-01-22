@@ -1,0 +1,17 @@
+<div>
+  <h2>Movies now in Cinemas</h2>
+</div>
+
+<div>
+  <div *ngFor="let movie of nowPlaying | slice:0:3">
+    <img src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" alt="">
+    <div class="gradient" [routerLink]="['../movie/'+movie.id]">
+      <div class="movieText">
+        <h1>{{movie.title}}</h1>
+        <p> <span class="material-symbols-outlined">event</span> {{movie.release_date}}</p>
+        <p> <span class="material-symbols-outlined">star_rate</span> {{movie.vote_average}}</p>
+        <p>{{movie.overview.slice(0,200)}}...</p>
+      </div>
+    </div>
+  </div>
+</div>

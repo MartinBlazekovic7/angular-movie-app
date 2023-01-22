@@ -26,6 +26,7 @@ export class MoviesService {
   DETAILS_URL = 'https://api.themoviedb.org/3/movie/';
   GENRES_URL = 'https://api.themoviedb.org/3/genre/movie/list';
   DISCOVER_URL = 'https://api.themoviedb.org/3/discover/movie';
+  NOW_PLAYING_URL = 'https://api.themoviedb.org/3/movie/now_playing';
 
   constructor(private http: HttpClient) { }
 
@@ -37,9 +38,14 @@ export class MoviesService {
     return this.http.get<MovieResponse>(this.POPULAR_URL+this.API_KEY);
   }
 
+  getNowPlaying(): Observable<MovieResponse>{
+    return this.http.get<MovieResponse>(this.NOW_PLAYING_URL+this.API_KEY);
+  }
+
   getTopRated(page): Observable<MovieResponse>{
     return this.http.get<MovieResponse>(this.TOP_RATED_URL+this.API_KEY_PAGE+page);
   }
+
 
   getDetails(id): Observable<MovieDetails>{
     return this.http.get<MovieDetails>(this.DETAILS_URL+id+this.API_KEY);

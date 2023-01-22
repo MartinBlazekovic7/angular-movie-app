@@ -8,7 +8,6 @@ import {DiscoveryModule} from "./discovery/discovery.module";
 import {AppComponent} from "./app.component";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { UpcomingComponent } from './upcoming/upcoming.component';
 import {HomeComponent} from "./home/home.component";
 import { ArtistsComponent } from './artists/artists.component';
 import { MovieDetailsComponent } from './shared/details/movie-details/movie-details.component';
@@ -18,6 +17,7 @@ import { SortingPipe } from './shared/details/artist-details/sorting.pipe';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SearchComponent } from './search/search.component';
 import {TopratedModule} from "./toprated/toprated.module";
+import { LiveNowComponent } from './live-now/live-now.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +26,13 @@ import {TopratedModule} from "./toprated/toprated.module";
     NavbarComponent,
     FooterComponent,
     FavoritesComponent,
-    UpcomingComponent,
     ArtistsComponent,
     MovieDetailsComponent,
     ShowDetailsComponent,
     ArtistDetailsComponent,
     SortingPipe,
-    SearchComponent
+    SearchComponent,
+    LiveNowComponent
   ],
   imports: [
     BrowserModule,
