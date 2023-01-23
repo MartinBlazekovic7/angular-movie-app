@@ -4,28 +4,21 @@
 HOME - jedna stranica, welcome to the home of cinema and tv, upcoming movies, top rated movies, upcoming shows, top rated shows, top rated artists
 
 
-Discovery - dva taba movies and shows, zanrovi, mini search
 
-Search - cisti search po imenu //// preko localStoragea spremiti searchTerm
-
-Upcoming - novi filmovi ili serije, mogucnost stavljanja datuma izlaska
-
-Top Rated - lista top rated filmova, pipeovi, sortirani, pagination
+Search - preko localStoragea spremiti searchTerm
 
 Favorites - dodani favoriti, posebno filmovi, posebno serije
 
-Movie/id - detalji o filmu ////// na cast & crew dodati gumb show all, otvara novu komponentu movie/id/cast&crew i pRikazuje sve to
+Movie/id - na cast & crew dodati gumb show all, otvara novu komponentu movie/id/cast&crew i pRikazuje sve to
 
-Show/id - detalji o seriji ////// dodati sezone
+Show/id - dodati sezone
 
-artist/id - detalji o ljudima 
+artist/id - hover na sliku mijenja i pokazuje druge slike
 
 Artists tab? - nesto o ljudima
 
 
 sto popraviti:
-navigacija - da se mijenja aktivna, po ruti ///// cinemaholic naslov
-title cinemaholic - da se ne mijenja po svakoj stranici
 za svaki poster dodat fallback na svim dijelovima aplikacije
 opis na home pageu ode ispod
 popraviti kad ljudi nemaju sliku, opis, filmove, serije //// takoder kad im je predug opis

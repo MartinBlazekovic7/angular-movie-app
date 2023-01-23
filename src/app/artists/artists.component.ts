@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PeopleService} from "../shared/other/services/people.service";
+import {People} from "../shared/other/model/people.model";
 
 @Component({
   selector: 'app-artists',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistsComponent implements OnInit {
 
-  constructor() { }
+  popularArtists: People[] = [];
+
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
+
+    this.peopleService.getTrending()
+      .subscribe(response => {
+        this.popularArtists = response.results;
+        console.log(this.popularArtists);
+      })
+
   }
 
 }

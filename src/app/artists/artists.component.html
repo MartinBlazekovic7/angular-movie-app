@@ -1,1 +1,5 @@
-<p>artists works!</p>
+<div class="artistGrid">
+  <div class="artistCard" *ngFor="let artist of popularArtists">
+    <img src="https://image.tmdb.org/t/p/original{{artist.profile_path}}" alt="">
+  </div>
+</div>

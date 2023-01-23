@@ -3,7 +3,7 @@
 </div>
 
 <div>
-  <div *ngFor="let movie of nowPlaying | slice:0:3">
+  <div *ngFor="let movie of nowPlaying">
     <img src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" alt="">
     <div class="gradient" [routerLink]="['../movie/'+movie.id]">
       <div class="movieText">
