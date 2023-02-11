@@ -1,48 +1,59 @@
 <div [@inOutAnimation] class="upcomingAndTop">
-
   <div class="upcomingMovies">
     <div class="titleBar">
       <h2 class="subtitle">UPCOMING MOVIES</h2>
-      <button [routerLink]="['upcoming']">MORE</button>
+      <button [routerLink]="['../discovery/movies']">MORE</button>
     </div>
-    <div class="slideDiv" *ngFor="let u of upcoming | slice:currMovie:currMovie+1" [routerLink]="['/movie/'+u.id]">
-      <img [@inOutAnimation] src="https://image.tmdb.org/t/p/original{{u.backdrop_path}}" alt="">
+    <div
+      class="slideDiv"
+      *ngFor="let u of upcoming | slice : currMovie : currMovie + 1"
+      [routerLink]="['/movie/' + u.id]"
+    >
+      <img
+        [@inOutAnimation]
+        src="https://image.tmdb.org/t/p/original{{ u.backdrop_path }}"
+        alt=""
+      />
       <div class="desc">
-        <h1>{{u.title}}</h1>
-        <p>{{u.overview}}</p>
+        <h1>{{ u.title }}</h1>
+        <p>{{ u.overview }}</p>
       </div>
-      <button class="prevButton" (click)="prevSlideMovie()"><span class="material-symbols-outlined">
-arrow_back_ios
-</span></button>
-      <button class="nextButton" (click)="nextSlideMovie()"><span class="material-symbols-outlined">
-arrow_forward_ios
-</span></button>
+      <button class="prevButton" (click)="prevSlideMovie()">
+        <span class="material-symbols-outlined"> arrow_back_ios </span>
+      </button>
+      <button class="nextButton" (click)="nextSlideMovie()">
+        <span class="material-symbols-outlined"> arrow_forward_ios </span>
+      </button>
     </div>
   </div>
-
 
   <div class="topRatedShows">
     <div class="titleBar">
       <h2 class="subtitle">POPULAR SHOWS</h2>
-      <button>MORE</button>
+      <button [routerLink]="['../discovery/shows']">MORE</button>
     </div>
-    <div class="slideDiv" *ngFor="let s of popular | slice:currShow:currShow+1" [routerLink]="['/show/'+s.id]">
-      <img [@inOutAnimation] src="https://image.tmdb.org/t/p/original{{s.backdrop_path}}" alt="">
+    <div
+      class="slideDiv"
+      *ngFor="let s of popular | slice : currShow : currShow + 1"
+      [routerLink]="['/show/' + s.id]"
+    >
+      <img
+        [@inOutAnimation]
+        src="https://image.tmdb.org/t/p/original{{ s.backdrop_path }}"
+        alt=""
+      />
       <div class="desc">
-        <h1>{{s.name}}</h1>
-        <p>{{s.overview}}</p>
+        <h1>{{ s.name }}</h1>
+        <p>{{ s.overview }}</p>
       </div>
-      <button class="prevButton" (click)="prevSlideShow()"><span class="material-symbols-outlined">
-arrow_back_ios
-</span></button>
-      <button class="nextButton" (click)="nextSlideShow()"><span class="material-symbols-outlined">
-arrow_forward_ios
-</span></button>
+      <button class="prevButton" (click)="prevSlideShow()">
+        <span class="material-symbols-outlined"> arrow_back_ios </span>
+      </button>
+      <button class="nextButton" (click)="nextSlideShow()">
+        <span class="material-symbols-outlined"> arrow_forward_ios </span>
+      </button>
     </div>
   </div>
-
-
-
 </div>
 
 <div [@inOutAnimation] class="artistsDiv">
@@ -50,28 +61,44 @@ arrow_forward_ios
     <div class="titleBar">
       <h2 class="subtitle">TRENDING ARTISTS</h2>
       <div>
-        <a class="arrows" (click)="prevArtists()"><span class="material-symbols-outlined">arrow_back_ios</span></a>
-        <a class="arrows" (click)="nextArtists()"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
+        <a class="arrows" (click)="prevArtists()"
+          ><span class="material-symbols-outlined">arrow_back_ios</span></a
+        >
+        <a class="arrows" (click)="nextArtists()"
+          ><span class="material-symbols-outlined">arrow_forward_ios</span></a
+        >
       </div>
     </div>
   </div>
   <div class="displayArtists">
-      <div
-          [@inOutAnimation]
-           class="artistBox"
-           *ngFor="let a of artists | slice:currPage:currPage+4"
-          [routerLink]="['/artist/'+a.id]">
-        <img *ngIf="a.profile_path" src="https://image.tmdb.org/t/p/original{{a.profile_path}}" alt="">
-        <img id="placeholder" *ngIf="!a.profile_path" src="../../assets/images/artistPlaceholder.jpg" alt="">
-        <div class="artistDesc">
-          <h2>{{a.name}}</h2>
-          <p *ngFor="let k of a.known_for">
-            <ng-container *ngIf="k.media_type === 'movie'">{{k.title}}</ng-container>
-            <ng-container *ngIf="k.media_type === 'tv'">{{k.name}}</ng-container>
-          </p>
-        </div>
+    <div
+      [@inOutAnimation]
+      class="artistBox"
+      *ngFor="let a of artists | slice : currPage : currPage + 4"
+      [routerLink]="['/artist/' + a.id]"
+    >
+      <img
+        *ngIf="a.profile_path"
+        src="https://image.tmdb.org/t/p/original{{ a.profile_path }}"
+        alt=""
+      />
+      <img
+        id="placeholder"
+        *ngIf="!a.profile_path"
+        src="../../assets/images/artistPlaceholder.jpg"
+        alt=""
+      />
+      <div class="artistDesc">
+        <h2>{{ a.name }}</h2>
+        <p *ngFor="let k of a.known_for">
+          <ng-container *ngIf="k.media_type === 'movie'">{{
+            k.title
+          }}</ng-container>
+          <ng-container *ngIf="k.media_type === 'tv'">{{
+            k.name
+          }}</ng-container>
+        </p>
       </div>
+    </div>
   </div>
 </div>
-
-
