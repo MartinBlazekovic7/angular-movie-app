@@ -1,50 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module'
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import {FavoritesComponent} from "./shared/favorites/favorites.component";
-import {DiscoveryModule} from "./discovery/discovery.module";
-import {AppComponent} from "./app.component";
-import {HttpClientModule} from "@angular/common/http";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HomeComponent} from "./home/home.component";
-import { ArtistsComponent } from './artists/artists.component';
-import { MovieDetailsComponent } from './shared/details/movie-details/movie-details.component';
-import { ShowDetailsComponent } from './shared/details/show-details/show-details.component';
-import { ArtistDetailsComponent } from './shared/details/artist-details/artist-details.component';
-import { SortingPipe } from './shared/details/artist-details/sorting.pipe';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { SearchComponent } from './search/search.component';
-import {TopratedModule} from "./toprated/toprated.module";
-import { LiveNowComponent } from './live-now/live-now.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DiscoveryModule } from './modules/discovery/discovery.module';
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './pages/home/home.component';
+import { ArtistsComponent } from './pages/artists/artists.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './pages/search/search.component';
+import { TopratedModule } from './modules/toprated/toprated.module';
+import { LiveNowComponent } from './pages/live-now/live-now.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NavbarComponent,
-    FooterComponent,
-    FavoritesComponent,
-    ArtistsComponent,
-    MovieDetailsComponent,
-    ShowDetailsComponent,
-    ArtistDetailsComponent,
-    SortingPipe,
-    SearchComponent,
-    LiveNowComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DiscoveryModule,
     TopratedModule,
+    SharedModule,
+    PagesModule,
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

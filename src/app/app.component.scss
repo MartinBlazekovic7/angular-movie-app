@@ -1,39 +1,33 @@
-.mainBody{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100vh;
+.mainBody {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .middle {
-    display: flex;
-    flex-direction: row;
-    width: 65%;
-    background-color: #272B2E;
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  background-color: #272b2e;
 }
 
 app-navbar {
   width: 15%;
   z-index: 1;
-  box-shadow: 7px -1px 23px -6px rgba(0,0,0,0.75);
-}
-.sidebar{
-  width: 20%;
-  background-color: #1F2326;
-  box-shadow: -7px -1px 23px -6px rgba(0,0,0,0.75);
-  z-index: 1;
+  box-shadow: 7px -1px 23px -6px rgba(0, 0, 0, 0.75);
 }
 
-app-footer{
+app-footer {
   min-height: 20vh;
 }
 
 @media only screen and (max-width: 1450px) {
-  .sidebar{
+  .sidebar {
     transition: 0.5s;
     display: none;
   }
-  .middle{
+  .middle {
     width: 85%;
   }
 }

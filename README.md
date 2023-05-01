@@ -1,11 +1,8 @@
-  1bdf07a878e60c35ec4b72268c4a797e
-
+1bdf07a878e60c35ec4b72268c4a797e
 
 HOME - jedna stranica, welcome to the home of cinema and tv, upcoming movies, top rated movies, upcoming shows, top rated shows, top rated artists
 
-
-
-Search - preko localStoragea spremiti searchTerm
+Search - preko urla spremiti searchTerm
 
 Favorites - dodani favoriti, posebno filmovi, posebno serije
 
@@ -16,7 +13,6 @@ Show/id - dodati sezone
 artist/id - hover na sliku mijenja i pokazuje druge slike
 
 Artists tab? - nesto o ljudima
-
 
 sto popraviti:
 za svaki poster dodat fallback na svim dijelovima aplikacije
