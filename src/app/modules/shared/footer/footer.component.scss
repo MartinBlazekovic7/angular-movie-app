@@ -1,7 +1,7 @@
-.footerDiv{
-  min-height: 30vh;
-  background-color: #1F2326;
-  color: #FBFBF2;
+.footerDiv {
+  min-height: 10vh;
+  background-color: #1f2326;
+  color: #fbfbf2;
   font-family: BebasNeue, sans-serif;
   text-align: center;
   display: flex;
@@ -9,6 +9,17 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  font-size: 2rem;
   user-select: none;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  i,
+  h4 {
+    opacity: 0.8;
+  }
+  i {
+    font-size: 0.8rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
 }

@@ -8,7 +8,6 @@ h2 {
   padding-bottom: 12px;
   margin-bottom: 12px;
 }
-
 div {
   width: 100%;
   img {
@@ -37,12 +36,13 @@ div {
   opacity: 1;
   .movieText {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 0;
     height: 30%;
     color: #fbfbf2;
     font-family: "Quicksand SemiBold", sans-serif;
     padding: 0 5%;
+    overflow: hidden;
     h1 {
       font-size: 1.5rem;
     }
@@ -51,7 +51,7 @@ div {
       display: flex;
       flex-direction: row;
       align-items: center;
-      overflow: hidden;
+
       color: #adadad;
       span {
         color: #adadad;
