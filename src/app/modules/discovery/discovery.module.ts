@@ -5,6 +5,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { ShowsComponent } from './shows/shows.component';
 import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component';
 import { ShowGenreComponent } from './shows/show-genre/show-genre.component';
+import { FlickityModule } from '../shared/other/directives/flickity/flickity.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,6 @@ import { ShowGenreComponent } from './shows/show-genre/show-genre.component';
     ShowGenreComponent,
   ],
   exports: [MoviesComponent],
-  imports: [CommonModule, DiscoveryRoutingModule],
+  imports: [CommonModule, DiscoveryRoutingModule, FlickityModule],
 })
 export class DiscoveryModule {}

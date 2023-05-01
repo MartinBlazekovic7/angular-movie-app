@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FlickityModule } from '../modules/shared/other/directives/flickity/flickity.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    FlickityModule,
   ],
   exports: [
     HomeComponent,

@@ -1,19 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: "BebasNeue";
-  src: local("BebasNeue"), url(./assets/fonts/BebasNeue-Regular.ttf) format("truetype");
+  src: local("BebasNeue"),
+    url(./assets/fonts/BebasNeue-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Quicksand Light";
-  src: local("Quicksand Light"), url(./assets/fonts/Quicksand-Light.ttf) format("truetype");
+  src: local("Quicksand Light"),
+    url(./assets/fonts/Quicksand-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Quicksand SemiBold";
-  src: local("Quicksand SemiBold"), url(./assets/fonts/Quicksand-SemiBold.ttf) format("truetype");
+  src: local("Quicksand SemiBold"),
+    url(./assets/fonts/Quicksand-SemiBold.ttf) format("truetype");
 }
-
-
 
 * {
   margin: 0;
@@ -21,15 +22,22 @@
   box-sizing: border-box;
 }
 
-app-movie-details{
+app-movie-details {
   min-height: 1000px;
   width: 100%;
 }
-app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-live-now{
+app-home,
+app-search,
+app-top-movies,
+app-top-shows,
+app-shows,
+app-movies,
+app-live-now,
+app-favorites {
   width: 100%;
 }
 
-.titleBar{
+.titleBar {
   text-transform: uppercase;
   width: 100%;
   display: flex;
@@ -38,22 +46,22 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
   justify-content: space-between;
   margin: 20px 0;
   padding-bottom: 5px;
-  border-bottom: 1px solid #FBFBF2;
+  border-bottom: 1px solid #fbfbf2;
 }
-.arrows{
+.arrows {
   user-select: none;
   cursor: pointer;
   transition: 0.3s;
-  &:hover{
-    color: #FD515A;
+  &:hover {
+    color: #fd515a;
   }
 }
 .redButton {
   font-family: "Quicksand Light", sans-serif;
   border: none;
   outline: none;
-  background-color: #FD515A;
-  color: #FBFBF2;
+  background-color: #fd515a;
+  color: #fbfbf2;
   padding: 1%;
   border-radius: 10px;
   cursor: pointer;
@@ -63,7 +71,7 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
   }
 }
 
-.topRatedNavbar{
+.topRatedNavbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +81,7 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
     cursor: pointer;
     user-select: none;
     font-family: "Quicksand Light", sans-serif;
-    color: #FBFBF2;
+    color: #fbfbf2;
     width: 50%;
     text-align: center;
     height: 100%;
@@ -85,28 +93,31 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
     border-radius: 10px;
     font-size: 1.5rem;
     &:hover {
-      background-color: #1F2326;
+      background-color: #1f2326;
     }
-
   }
 }
 
-.topRatedSelected{
-  background: rgb(251,251,251);
-  background: linear-gradient(0deg, rgba(251,251,251,0) 13%, rgba(25,27,28,1) 93%);
+.topRatedSelected {
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 251, 251, 0) 13%,
+    rgba(25, 27, 28, 1) 93%
+  );
 }
 
-.topRatedList{
+.topRatedList {
   transition: 1s;
   font-family: "Quicksand Light", sans-serif;
-  color: #FBFBF2;
+  color: #fbfbf2;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 2000px;
 }
 
-.topRatedMovie{
+.topRatedMovie {
   width: 90%;
   margin: 12px auto;
   display: flex;
@@ -114,7 +125,7 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
   justify-content: center;
   align-content: center;
   align-items: center;
-  border-bottom: 1px solid #FBFBF2;
+  border-bottom: 1px solid #fbfbf2;
   padding-bottom: 24px;
   user-select: none;
   img {
@@ -123,7 +134,7 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.2s;
-    &:hover{
+    &:hover {
       transform: scale(1.02);
     }
   }
@@ -136,7 +147,7 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
       cursor: pointer;
       width: 90%;
       transition: 0.2s;
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -146,10 +157,6 @@ app-home, app-search, app-top-movies, app-top-shows, app-shows, app-movies, app-
     }
   }
   transition: 1s;
-  &:hover{
-
+  &:hover {
   }
 }
-
-
-
