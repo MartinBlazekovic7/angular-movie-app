@@ -23,10 +23,14 @@ export class FlickityDirective implements OnInit, OnDestroy {
   @Input() flickityConfig: Flickity.Options = {
     imagesLoaded: true,
     pageDots: false,
-    groupCells: true,
+    groupCells: false,
     wrapAround: true,
     draggable: true,
-    prevNextButtons: false,
+    prevNextButtons: true,
+    preventClicks: false,
+    contain: true,
+    lazyLoad: true,
+    resize: true,
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
