@@ -14,7 +14,7 @@ import { FlickityModule } from '../shared/other/directives/flickity/flickity.mod
     MovieGenreComponent,
     ShowGenreComponent,
   ],
-  exports: [MoviesComponent],
+  exports: [MoviesComponent, ShowsComponent],
   imports: [CommonModule, DiscoveryRoutingModule, FlickityModule],
 })
 export class DiscoveryModule {}

@@ -1,19 +1,24 @@
 <div class="genre">
   <div class="titleBar">
-    <h2>{{genre.name}}</h2>
-    <div>
-      <a class="arrows" (click)="nextSlide()"><span class="material-symbols-outlined">arrow_back_ios</span></a>
-      <a class="arrows" (click)="prevSlide()"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
-    </div>
+    <h2>{{ genre.name }}</h2>
   </div>
-  <div class="displayMovies">
+  <div *ngIf="shows?.length > 0" class="carousel" #stepCarousel appFlickity>
     <div
-      [@inOutAnimation]
       class="movieBox"
-      *ngFor="let show of shows | slice:currPage:currPage+5"
-      [routerLink]="['/show/'+show.id]">
-      <img *ngIf="show.poster_path" src="https://image.tmdb.org/t/p/original{{show.poster_path}}" alt="">
-      <img id="placeholder" *ngIf="!show.poster_path" src="../src/assets/images/posterPlaceholder.jpg" alt="">
+      *ngFor="let show of shows"
+      [routerLink]="['/show/' + show.id]"
+    >
+      <img
+        *ngIf="show.poster_path"
+        src="https://image.tmdb.org/t/p/original{{ show.poster_path }}"
+        alt=""
+      />
+      <img
+        id="placeholder"
+        *ngIf="!show.poster_path"
+        src="../../../../../assets/images/posterPlaceholder.jpg"
+        alt=""
+      />
     </div>
   </div>
 </div>
