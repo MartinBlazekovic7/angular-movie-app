@@ -1,15 +1,16 @@
-.welcome{
+.welcome {
   width: 90%;
   margin: 20px 5%;
   text-align: center;
   font-family: BebasNeue, serif;
-  color: #FBFBF2;
+  color: #fbfbf2;
   font-size: 2rem;
 }
 
-.upcomingAndTop, .artistsDiv{
+.upcomingAndTop,
+.artistsDiv {
   font-family: "Quicksand Light", sans-serif;
-  color: #FBFBF2;
+  color: #fbfbf2;
   width: 90%;
   margin: 0 5%;
 }
@@ -17,8 +18,8 @@
 .titleBar button {
   border: none;
   outline: none;
-  background-color: #FD515A;
-  color: #FBFBF2;
+  background-color: #fd515a;
+  color: #fbfbf2;
   padding: 1%;
   border-radius: 10px;
   cursor: pointer;
@@ -35,14 +36,14 @@
   height: 450px;
   background-color: black;
   border-radius: 20px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   transition: 0.3s;
   &:hover {
     img {
       transform: scale(1.05);
     }
   }
-
 }
 img {
   width: 100%;
@@ -51,17 +52,22 @@ img {
 }
 .desc {
   position: absolute;
-  background: rgb(9,9,9);
-  background: linear-gradient(180deg, rgba(9,9,9,0) 0%, rgba(9,9,9,0.5) 40%);
+  background: rgb(9, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 9, 0) 0%,
+    rgba(9, 9, 9, 0.5) 40%
+  );
   width: 100%;
   padding: 0 5%;
   height: 30%;
   top: 70%;
   margin: 0;
-  color: #FBFBF2;
+  color: #fbfbf2;
   user-select: none;
 }
-.prevButton, .nextButton {
+.prevButton,
+.nextButton {
   position: absolute;
   width: 5%;
   height: 100%;
@@ -82,7 +88,11 @@ img {
   top: 0;
   left: 0;
   &:hover {
-    background: linear-gradient(-90deg, rgba(9,9,9,0) 0%, rgba(9,9,9,0.9) 80%);
+    background: linear-gradient(
+      -90deg,
+      rgba(9, 9, 9, 0) 0%,
+      rgba(9, 9, 9, 0.9) 80%
+    );
   }
 }
 .nextButton {
@@ -91,17 +101,21 @@ img {
   &:hover {
     transition: 0.5s;
     opacity: 1;
-    background: linear-gradient(90deg, rgba(9,9,9,0) 0%, rgba(9,9,9,0.9) 80%);
+    background: linear-gradient(
+      90deg,
+      rgba(9, 9, 9, 0) 0%,
+      rgba(9, 9, 9, 0.9) 80%
+    );
   }
 }
-.displayArtists{
+.displayArtists {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   min-height: 500px;
 }
-.artistBox{
+.artistBox {
   width: 25%;
   height: 100%;
   position: relative;
@@ -114,23 +128,32 @@ img {
   }
 }
 
-.artistDesc{
+.artistDesc {
   position: absolute;
   height: 25%;
-  top: 75%;
+  bottom: 0;
   left: 0;
   width: 100%;
   border-radius: 20px;
-  background: rgb(9,9,9);
-  background: linear-gradient(180deg, rgba(9,9,9,0) 0%, rgba(9,9,9,0.5) 40%);
+  background: rgb(9, 9, 9);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 9, 0) 0%,
+    rgba(9, 9, 9, 0.5) 40%
+  );
   overflow: hidden;
   user-select: none;
+  padding-bottom: 75%;
+  text-align: center;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 @media only screen and (max-width: 1450px) {
-  .slideDiv{
+  .slideDiv {
     height: 400px;
   }
-  .desc{
+  .desc {
     h1 {
       font-size: 18px;
     }
@@ -140,14 +163,14 @@ img {
   }
 }
 @media only screen and (max-width: 1250px) {
-  .slideDiv{
+  .slideDiv {
     height: 350px;
   }
   .desc {
     height: 40%;
     top: 60%;
   }
-  .artistDesc{
+  .artistDesc {
     h2 {
       font-size: 14px;
     }
@@ -157,15 +180,15 @@ img {
   }
 }
 @media only screen and (max-width: 1050px) {
-  .slideDiv{
+  .slideDiv {
     height: 300px;
   }
 }
 @media only screen and (max-width: 850px) {
-  .slideDiv{
+  .slideDiv {
     height: 250px;
   }
-  .desc{
+  .desc {
     h1 {
       font-size: 16px;
     }
@@ -184,13 +207,12 @@ img {
     }
   }
 
-  .slideDiv{
+  .slideDiv {
     height: 170px;
     img {
-
     }
   }
-  .desc{
+  .desc {
     height: 30%;
     top: 70%;
     h1 {
@@ -200,7 +222,8 @@ img {
       display: none;
     }
   }
-  .prevButton, .nextButton {
+  .prevButton,
+  .nextButton {
     opacity: 1;
     &:hover {
       background: none;
@@ -209,15 +232,15 @@ img {
   .nextButton {
     left: 94%;
   }
-  .displayArtists{
+  .displayArtists {
     flex-direction: column;
     min-height: 1000px;
   }
-  .artistBox{
+  .artistBox {
     width: 60%;
     margin: 0 auto;
   }
-  .artistDesc{
+  .artistDesc {
     h2 {
       font-size: 16px;
     }

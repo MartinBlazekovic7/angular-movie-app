@@ -193,6 +193,11 @@ app-favorites {
   transition: 0.15s;
   &:hover {
     transform: scale(1.05);
+    .artistDesc {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 

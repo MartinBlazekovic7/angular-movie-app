@@ -60,44 +60,38 @@
   <div class="upcomingMovies">
     <div class="titleBar">
       <h2 class="subtitle">TRENDING ARTISTS</h2>
-      <div>
-        <a class="arrows" (click)="prevArtists()"
-          ><span class="material-symbols-outlined">arrow_back_ios</span></a
-        >
-        <a class="arrows" (click)="nextArtists()"
-          ><span class="material-symbols-outlined">arrow_forward_ios</span></a
-        >
-      </div>
+      <button [routerLink]="['../artists']">MORE</button>
     </div>
   </div>
   <div class="displayArtists">
-    <div
-      [@inOutAnimation]
-      class="artistBox"
-      *ngFor="let a of artists | slice : currPage : currPage + 4"
-      [routerLink]="['/artist/' + a.id]"
-    >
-      <img
-        *ngIf="a.profile_path"
-        src="https://image.tmdb.org/t/p/original{{ a.profile_path }}"
-        alt=""
-      />
-      <img
-        id="placeholder"
-        *ngIf="!a.profile_path"
-        src="../../assets/images/artistPlaceholder.jpg"
-        alt=""
-      />
-      <div class="artistDesc">
-        <h2>{{ a.name }}</h2>
-        <p *ngFor="let k of a.known_for">
-          <ng-container *ngIf="k.media_type === 'movie'">{{
-            k.title
-          }}</ng-container>
-          <ng-container *ngIf="k.media_type === 'tv'">{{
-            k.name
-          }}</ng-container>
-        </p>
+    <div *ngIf="artists?.length > 0" class="carousel" #stepCarousel appFlickity>
+      <div
+        *ngFor="let a of artists"
+        class="movieBox"
+        [routerLink]="['/artists/' + a.id]"
+      >
+        <img
+          *ngIf="a.profile_path"
+          src="https://image.tmdb.org/t/p/original{{ a.profile_path }}"
+          alt=""
+        />
+        <img
+          id="placeholder"
+          *ngIf="!a.profile_path"
+          src="../../assets/images/artistPlaceholder.jpg"
+          alt=""
+        />
+        <div class="artistDesc">
+          <h2>{{ a.name }}</h2>
+          <p *ngFor="let k of a.known_for">
+            <ng-container *ngIf="k.media_type === 'movie'">{{
+              k.title
+            }}</ng-container>
+            <ng-container *ngIf="k.media_type === 'tv'">{{
+              k.name
+            }}</ng-container>
+          </p>
+        </div>
       </div>
     </div>
   </div>
