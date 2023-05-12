@@ -5,3 +5,8 @@
 <div [@inOutAnimation] *ngFor="let genre of genres">
   <app-movie-genre [genre]="genre"></app-movie-genre>
 </div>
+<app-loader
+  [overlayColor]="'#1f2326'"
+  [loaderText]="'Please wait...'"
+  [loaderTextColor]="'#fd515a'"
+></app-loader>

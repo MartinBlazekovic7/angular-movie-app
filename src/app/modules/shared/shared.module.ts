@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FlickityModule } from './other/directives/flickity/flickity.module';
 import { LoaderComponent } from './loader/loader.component';
+import { AppModule } from 'src/app/app.module';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,8 @@ import { LoaderComponent } from './loader/loader.component';
     LoaderComponent,
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
