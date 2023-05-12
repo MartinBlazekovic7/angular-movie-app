@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SearchResults } from 'src/app/modules/shared/other/model/search.model';
 import { SearchService } from 'src/app/modules/shared/other/services/search.service';
+import { LoaderService } from 'src/app/modules/shared/other/services/loader.service';
 
 @Component({
   selector: 'app-search',
@@ -14,12 +15,19 @@ export class SearchComponent implements OnInit {
   query: string = '';
   results: SearchResults[] = [];
 
-  constructor(private searchService: SearchService) {}
+  constructor(
+    private searchService: SearchService,
+    private loaderService: LoaderService
+  ) {}
 
   ngOnInit(): void {
+    this.loaderService.show();
     this.searchForm = new FormGroup({
       searchTerm: new FormControl('', null),
     });
+    setInterval(() => {
+      this.loaderService.hide();
+    }, 1200);
   }
 
   searchResults() {

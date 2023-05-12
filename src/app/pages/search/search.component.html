@@ -1,51 +1,80 @@
 <div class="searchBox">
   <form (submit)="searchResults()" [formGroup]="searchForm" class="stopForm">
-    <input type="text"
-           formControlName="searchTerm"
-           id="searchTerm"
-           (keyup)="searchResultsTyping()"
-           placeholder="Search TV, movies and artists"
-           autocomplete="off">
-    <input type="submit" hidden>
+    <input
+      type="text"
+      formControlName="searchTerm"
+      id="searchTerm"
+      (keyup)="searchResultsTyping()"
+      placeholder="Search TV, movies and artists"
+      autocomplete="off"
+    />
+    <input type="submit" hidden />
   </form>
 </div>
 
-
 <div *ngIf="results" class="results">
-  <div class="oneResult" *ngFor="let result of results | slice:0:9">
+  <div class="oneResult" *ngFor="let result of results | slice : 0 : 9">
     <ng-container *ngIf="result.media_type === 'movie'">
-      <div class="movieResult" [routerLink]="['/movie/'+result.id]">
-        <img *ngIf="result.poster_path" src="https://image.tmdb.org/t/p/original{{result.poster_path}}" alt="movie poster">
-        <img *ngIf="!result.poster_path" src="../../assets/images/posterPlaceholder.jpg" alt="movie poster">
+      <div class="movieResult" [routerLink]="['/movie/' + result.id]">
+        <img
+          *ngIf="result.poster_path"
+          src="https://image.tmdb.org/t/p/original{{ result.poster_path }}"
+          alt="movie poster"
+        />
+        <img
+          *ngIf="!result.poster_path"
+          src="../../assets/images/posterPlaceholder.jpg"
+          alt="movie poster"
+        />
         <div class="gradient">
           <div class="desc">
-            <h2>{{result.title}}</h2>
+            <h2>{{ result.title }}</h2>
           </div>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="result.media_type === 'tv'">
-      <div class="showResult" [routerLink]="['/show/'+result.id]">
-        <img *ngIf="result.poster_path" src="https://image.tmdb.org/t/p/original{{result.poster_path}}" alt="tv poster">
-        <img *ngIf="!result.poster_path" src="../../assets/images/posterPlaceholder.jpg" alt="tv poster">
+      <div class="showResult" [routerLink]="['/show/' + result.id]">
+        <img
+          *ngIf="result.poster_path"
+          src="https://image.tmdb.org/t/p/original{{ result.poster_path }}"
+          alt="tv poster"
+        />
+        <img
+          *ngIf="!result.poster_path"
+          src="../../assets/images/posterPlaceholder.jpg"
+          alt="tv poster"
+        />
         <div class="gradient">
           <div class="desc">
-            <h2>{{result.name}}</h2>
+            <h2>{{ result.name }}</h2>
           </div>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="result.media_type === 'person'">
-      <div class="artistResult" [routerLink]="['/artist/'+result.id]">
-        <img *ngIf="result.profile_path" src="https://image.tmdb.org/t/p/original{{result.profile_path}}" alt="artist poster">
-        <img *ngIf="!result.profile_path" src="../../assets/images/artistPlaceholder.jpg" alt="artist poster">
+      <div class="artistResult" [routerLink]="['/artist/' + result.id]">
+        <img
+          *ngIf="result.profile_path"
+          src="https://image.tmdb.org/t/p/original{{ result.profile_path }}"
+          alt="artist poster"
+        />
+        <img
+          *ngIf="!result.profile_path"
+          src="../../assets/images/artistPlaceholder.jpg"
+          alt="artist poster"
+        />
         <div class="gradient">
           <div class="desc">
-            <h2>{{result.name}}</h2>
+            <h2>{{ result.name }}</h2>
           </div>
         </div>
       </div>
     </ng-container>
   </div>
 </div>
-
+<app-loader
+  [overlayColor]="'#1f2326'"
+  [loaderText]="'Please wait...'"
+  [loaderTextColor]="'#fd515a'"
+></app-loader>

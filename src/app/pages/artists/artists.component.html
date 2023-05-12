@@ -1,5 +1,13 @@
 <div class="artistGrid">
   <div class="artistCard" *ngFor="let artist of popularArtists">
-    <img src="https://image.tmdb.org/t/p/original{{artist.profile_path}}" alt="">
+    <img
+      src="https://image.tmdb.org/t/p/original{{ artist.profile_path }}"
+      alt=""
+    />
   </div>
 </div>
+<app-loader
+  [overlayColor]="'#1f2326'"
+  [loaderText]="'Please wait...'"
+  [loaderTextColor]="'#fd515a'"
+></app-loader>
