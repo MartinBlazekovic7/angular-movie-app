@@ -23,6 +23,7 @@ import {
 import { MoviesService } from 'src/app/modules/shared/other/services/movies.service';
 import { PeopleService } from 'src/app/modules/shared/other/services/people.service';
 import { ShowsService } from 'src/app/modules/shared/other/services/shows.service';
+import { LoaderService } from 'src/app/modules/shared/other/services/loader.service';
 
 @Component({
   selector: 'app-home',
@@ -57,10 +58,12 @@ export class HomeComponent implements OnInit {
   constructor(
     private movieService: MoviesService,
     private showService: ShowsService,
-    private peopleService: PeopleService
+    private peopleService: PeopleService,
+    private loaderService: LoaderService
   ) {}
 
   ngOnInit(): void {
+    this.loaderService.show();
     this.movieService.getUpcoming().subscribe((response) => {
       this.movieResponse = response;
       this.upcoming = this.movieResponse.results;
@@ -76,6 +79,10 @@ export class HomeComponent implements OnInit {
       this.artists = this.peopleResponse.results;
       console.log(this.artists);
     });
+
+    setInterval(() => {
+      this.loaderService.hide();
+    }, 1200);
 
     setInterval(() => {
       this.nextSlideMovie();

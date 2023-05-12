@@ -12,6 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FlickityModule } from './other/directives/flickity/flickity.module';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FlickityModule } from './other/directives/flickity/flickity.module';
     ShowDetailsComponent,
     ArtistDetailsComponent,
     SortingPipe,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { FlickityModule } from './other/directives/flickity/flickity.module';
     ShowDetailsComponent,
     ArtistDetailsComponent,
     SortingPipe,
+    LoaderComponent,
   ],
 })
 export class SharedModule {}

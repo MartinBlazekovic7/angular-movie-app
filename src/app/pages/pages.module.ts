@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FlickityModule } from '../modules/shared/other/directives/flickity/flickity.module';
+import { SharedModule } from '../modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FlickityModule } from '../modules/shared/other/directives/flickity/flic
     ReactiveFormsModule,
     RouterModule,
     FlickityModule,
+    SharedModule,
   ],
   exports: [
     HomeComponent,
