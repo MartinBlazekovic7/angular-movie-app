@@ -3,16 +3,25 @@
   <div [routerLink]="['../shows']">Shows</div>
 </nav>
 <div class="topRatedList" [@inOutAnimation]>
-  <div class="topRatedMovie"
-    *ngFor="let movie of movies; index as i"
-  >
-    <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" alt="" [routerLink]="['../../movie/'+movie.id]">
+  <div class="topRatedMovie" *ngFor="let movie of movies; index as i">
+    <img
+      src="https://image.tmdb.org/t/p/original{{ movie.poster_path }}"
+      alt=""
+      [routerLink]="['../../movie/' + movie.id]"
+    />
     <div>
-      <h2 [routerLink]="['../../movie/'+movie.id]">{{i+1}}. {{movie.title}} ({{movie?.release_date.slice(0, 4)}})</h2>
-      <h2>{{movie.vote_average}}</h2>
+      <h2 [routerLink]="['../../movie/' + movie.id]">
+        {{ i + 1 }}. {{ movie.title }} ({{ movie?.release_date.slice(0, 4) }})
+      </h2>
+      <h2>{{ movie.vote_average }}</h2>
     </div>
   </div>
 </div>
 <div class="buttonDiv">
   <button class="redButton" (click)="loadMore()">SHOW MORE</button>
 </div>
+<app-loader
+  [overlayColor]="'#1f2326'"
+  [loaderText]="'Please wait...'"
+  [loaderTextColor]="'#fd515a'"
+></app-loader>

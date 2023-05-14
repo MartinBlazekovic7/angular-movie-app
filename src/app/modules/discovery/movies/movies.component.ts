@@ -35,6 +35,4 @@ export class MoviesComponent implements OnInit {
       this.loaderService.hide();
     }, 2000);
   }
-
-  selectGenre(genre) {}
 }
