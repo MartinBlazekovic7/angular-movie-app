@@ -1,47 +1,73 @@
 <div class="fullBody">
-
   <div class="top">
-
     <div class="imgDiv">
-      <img src="https://image.tmdb.org/t/p/original{{artist.profile_path}}" alt="">
+      <img
+        src="https://image.tmdb.org/t/p/original{{ artist.profile_path }}"
+        alt=""
+      />
     </div>
     <div class="textDiv">
-      <h1>{{artist.name}}</h1>
+      <h1>{{ artist.name }}</h1>
       <ng-container *ngIf="artist.deathday">
-        <p class="greyed">({{artist.birthday}} - {{artist.deathday}})</p>
+        <p class="greyed">({{ artist.birthday }} - {{ artist.deathday }})</p>
       </ng-container>
       <ng-container *ngIf="!artist.deathday">
-        <p class="greyed">({{artist.birthday}})</p>
+        <p class="greyed">({{ artist.birthday }})</p>
       </ng-container>
-      <p class="greyed">{{artist.place_of_birth}}</p>
-      <p>{{artist.biography}}</p>
+      <p class="greyed">{{ artist.place_of_birth }}</p>
+      <p>{{ artist.biography }}</p>
     </div>
-
   </div>
 
   <div class="bottom">
     <div class="titleBar">
       <h2>MOVIES</h2>
-      <button (click)="showMore('movie')">{{moreLessMovie}}</button>
+      <button (click)="showMore('movie')">{{ moreLessMovie }}</button>
     </div>
     <div class="movies">
-      <div class="box" *ngFor="let movie of movies | sorting: 'popularity' | slice:0:movieNumber" [routerLink]="['/movie/'+movie.id]">
-          <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" alt="">
+      <div
+        class="box"
+        *ngFor="
+          let movie of movies | sorting : 'popularity' | slice : 0 : movieNumber
+        "
+        [routerLink]="['/movie/' + movie.id]"
+      >
+        <img
+          *ngIf="movie.poster_path"
+          src="https://image.tmdb.org/t/p/original{{ movie.poster_path }}"
+          alt=""
+        />
+        <img
+          *ngIf="!movie.poster_path"
+          src="../../../../../assets/images/posterPlaceholder.jpg"
+          alt=""
+        />
       </div>
     </div>
 
     <div class="titleBar">
       <h2>TV</h2>
-      <button (click)="showMore('show')">{{moreLessShow}}</button>
+      <button (click)="showMore('show')">{{ moreLessShow }}</button>
     </div>
     <div class="shows">
-      <div class="box" *ngFor="let show of shows | sorting: 'popularity' | slice:0:showNumber" [routerLink]="['/show/'+show.id]">
-          <img src="https://image.tmdb.org/t/p/original{{show.poster_path}}" alt="">
+      <div
+        class="box"
+        *ngFor="
+          let show of shows | sorting : 'popularity' | slice : 0 : showNumber
+        "
+        [routerLink]="['/show/' + show.id]"
+      >
+        <img
+          *ngIf="show.poster_path"
+          src="https://image.tmdb.org/t/p/original{{ show.poster_path }}"
+          alt=""
+        />
+        <img
+          *ngIf="!show.poster_path"
+          src="../../../../../assets/images/posterPlaceholder.jpg"
+          alt=""
+        />
       </div>
     </div>
   </div>
-
 </div>
-
-
-

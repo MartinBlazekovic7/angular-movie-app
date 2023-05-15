@@ -68,7 +68,7 @@
       <div
         *ngFor="let a of artists"
         class="movieBox"
-        [routerLink]="['/artists/' + a.id]"
+        [routerLink]="['../artist/' + a.id]"
       >
         <img
           *ngIf="a.profile_path"

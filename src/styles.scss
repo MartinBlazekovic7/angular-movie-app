@@ -22,7 +22,8 @@
   box-sizing: border-box;
 }
 
-app-movie-details {
+app-movie-details,
+app-show-details {
   min-height: 1000px;
   width: 100%;
 }
@@ -193,11 +194,6 @@ app-favorites {
   transition: 0.15s;
   &:hover {
     transform: scale(1.05);
-    .artistDesc {
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
   }
 }
 

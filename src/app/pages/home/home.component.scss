@@ -109,28 +109,13 @@ img {
   }
 }
 .displayArtists {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
   min-height: 500px;
 }
-.artistBox {
-  width: 25%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover {
-    transform: scale(1.05);
-    z-index: 1;
-  }
+.movieBox img:hover {
+  transform: none;
 }
-
 .artistDesc {
   position: absolute;
-  height: 25%;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -143,10 +128,14 @@ img {
   );
   overflow: hidden;
   user-select: none;
-  padding-bottom: 75%;
+  padding-bottom: 12px;
   text-align: center;
+  transform: 0.3s;
   &:hover {
-    transform: scale(1.05);
+    p,
+    h2 {
+      transform: scale(1.05);
+    }
   }
 }
 @media only screen and (max-width: 1450px) {
@@ -209,8 +198,6 @@ img {
 
   .slideDiv {
     height: 170px;
-    img {
-    }
   }
   .desc {
     height: 30%;
@@ -231,10 +218,6 @@ img {
   }
   .nextButton {
     left: 94%;
-  }
-  .displayArtists {
-    flex-direction: column;
-    min-height: 1000px;
   }
   .artistBox {
     width: 60%;
