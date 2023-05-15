@@ -3,6 +3,18 @@
 .flickity-slider {
   max-height: 400px;
 }
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #fd515a !important;
+}
+.flickity-button-icon {
+  fill: #272b2e !important;
+}
+.flickity-prev-next-button {
+  background-color: #fbfbf25c !important;
+  width: 50px !important;
+  height: 50px !important;
+}
 
 .carousel {
   background: transparent;
