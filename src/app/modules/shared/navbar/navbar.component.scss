@@ -1,8 +1,8 @@
-.fullNavbar {
+.full-navbar {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #1F2326;
+  background-color: #1f2326;
   width: 100%;
 }
 #title {
@@ -10,11 +10,11 @@
   text-align: center;
   font-family: BebasNeue, serif;
   font-size: 2rem;
-  color: #FBFBF2;
+  color: #fbfbf2;
 }
-.routes{
+.routes {
   padding-top: 25px;
-  color: #FBFBF2;
+  color: #fbfbf2;
   font-family: "Quicksand SemiBold", serif;
 }
 
@@ -34,21 +34,21 @@
   padding-right: 5%;
 }
 .route:hover {
-  color: #FBFBF2;
+  color: #fbfbf2;
 }
 
 .selected {
-  color: #FBFBF2;
-  border-right: 5px solid #FD515A;
+  color: #fbfbf2;
+  border-right: 5px solid #fd515a;
 }
-.selected span{
-  color: #FD515A;
+.selected span {
+  color: #fd515a;
 }
 @media only screen and (max-width: 1450px) {
-  #title h2{
+  #title h2 {
     font-size: 26px;
   }
-  .fullNavbar{
+  .full-navbar {
     h2 {
       transition: 0.3s;
       font-size: 16px;
@@ -56,18 +56,17 @@
   }
 }
 @media only screen and (max-width: 850px) {
-  .fullNavbar{
+  .full-navbar {
     h2 {
       transition: 0.3s;
       display: none;
     }
   }
-  .route{
+  .route {
     justify-content: center;
     margin: 20px 0;
   }
-  .selected{
+  .selected {
     border: none;
   }
 }
-

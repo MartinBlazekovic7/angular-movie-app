@@ -4,7 +4,6 @@ import { ArtistDetailsComponent } from './details/artist-details/artist-details.
 import { SortingPipe } from './details/artist-details/sorting.pipe';
 import { MovieDetailsComponent } from './details/movie-details/movie-details.component';
 import { ShowDetailsComponent } from './details/show-details/show-details.component';
-import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +17,6 @@ import { AppModule } from 'src/app/app.module';
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent,
     MovieDetailsComponent,
     ShowDetailsComponent,
     ArtistDetailsComponent,
@@ -35,7 +33,6 @@ import { AppModule } from 'src/app/app.module';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent,
     MovieDetailsComponent,
     ShowDetailsComponent,
     ArtistDetailsComponent,

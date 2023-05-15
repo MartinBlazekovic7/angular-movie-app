@@ -1,30 +1,41 @@
-<div class="fullBody">
+<div class="details-body">
   <div class="header">
     <div id="gradient"></div>
-    <img src="https://image.tmdb.org/t/p/original{{show?.backdrop_path}}" alt="">
+    <img
+      src="https://image.tmdb.org/t/p/original{{ show?.backdrop_path }}"
+      alt=""
+    />
   </div>
   <div class="mainMovieDetails">
-
     <div class="left">
-      <img src="https://image.tmdb.org/t/p/original{{show?.poster_path}}" alt="">
+      <img
+        src="https://image.tmdb.org/t/p/original{{ show?.poster_path }}"
+        alt=""
+      />
       <div class="rating">
-        <h1>{{show?.vote_average.toPrecision(2)}}\10</h1>
-        <p>({{show?.vote_count}} votes)</p>
+        <h1>{{ show?.vote_average.toPrecision(2) }}\10</h1>
+        <p>({{ show?.vote_count }} votes)</p>
       </div>
     </div>
     <div class="middle">
-
       <div class="titles">
-        <h1>{{show?.name}}</h1>
-        <p>Original title: {{show?.name}} ({{show?.first_air_date.slice(0, 4)}})</p>
+        <h1>{{ show?.name }}</h1>
+        <p>
+          Original title: {{ show?.name }} ({{
+            show?.first_air_date.slice(0, 4)
+          }})
+        </p>
       </div>
 
       <div class="buttons">
-        <button (click)="playTrailer()">Watch trailer <span class="material-symbols-outlined">play_arrow</span></button>
+        <button (click)="playTrailer()">
+          Watch trailer
+          <span class="material-symbols-outlined">play_arrow</span>
+        </button>
       </div>
 
       <div class="overview">
-        <p>{{show?.overview}}</p>
+        <p>{{ show?.overview }}</p>
       </div>
 
       <div class="extraDetails">
@@ -33,20 +44,23 @@
           <h4>Genre</h4>
           <div class="attributes">
             <p class="attribute" *ngFor="let g of show?.genres">
-              {{g?.name}}
+              {{ g?.name }}
             </p>
           </div>
         </div>
         <div class="table">
           <h4>Country of origin</h4>
           <div>
-            <p>{{show?.production_countries[0].name}}</p>
+            <p>{{ show?.production_countries[0].name }}</p>
           </div>
         </div>
         <div class="table">
           <h4>#</h4>
           <div>
-            <p>{{show?.number_of_episodes}} episodes / {{show?.number_of_seasons}} seasons</p>
+            <p>
+              {{ show?.number_of_episodes }} episodes /
+              {{ show?.number_of_seasons }} seasons
+            </p>
           </div>
         </div>
       </div>
@@ -56,7 +70,10 @@
         <div class="providersList">
           <div class="stream">
             <div *ngFor="let p of providers?.flatrate">
-              <img src="https://image.tmdb.org/t/p/original{{p?.logo_path}}" alt="">
+              <img
+                src="https://image.tmdb.org/t/p/original{{ p?.logo_path }}"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -65,17 +82,23 @@
     <div class="right">
       <h2>Cast & Crew</h2>
       <div class="castDiv">
-        <div class="castBox" *ngFor="let c of cast | slice: 0: 5">
-          <img *ngIf="c.profile_path" src="https://image.tmdb.org/t/p/original{{c?.profile_path}}" alt="">
-          <img *ngIf="!c.profile_path" src="assets/images/artistPlaceholder.jpg" alt="">
-          <div class="character" [routerLink]="['/artist/'+c.id]">
-            <h3>{{c?.name}}</h3>
-            <p>as {{c?.character}}</p>
+        <div class="castBox" *ngFor="let c of cast | slice : 0 : 5">
+          <img
+            *ngIf="c.profile_path"
+            src="https://image.tmdb.org/t/p/original{{ c?.profile_path }}"
+            alt=""
+          />
+          <img
+            *ngIf="!c.profile_path"
+            src="assets/images/artistPlaceholder.jpg"
+            alt=""
+          />
+          <div class="character" [routerLink]="['/artist/' + c.id]">
+            <h3>{{ c?.name }}</h3>
+            <p>as {{ c?.character }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-

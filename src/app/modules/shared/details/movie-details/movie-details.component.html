@@ -1,30 +1,41 @@
-<div class="fullBody">
+<div class="details-body">
   <div class="header">
     <div id="gradient"></div>
-    <img src="https://image.tmdb.org/t/p/original{{movie?.backdrop_path}}" alt="">
+    <img
+      src="https://image.tmdb.org/t/p/original{{ movie?.backdrop_path }}"
+      alt=""
+    />
   </div>
   <div class="mainMovieDetails">
-
     <div class="left">
-      <img src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}" alt="">
+      <img
+        src="https://image.tmdb.org/t/p/original{{ movie?.poster_path }}"
+        alt=""
+      />
       <div class="rating">
-        <h1>{{movie?.vote_average.toPrecision(2)}}\10</h1>
-        <p>({{movie?.vote_count}} votes)</p>
+        <h1>{{ movie?.vote_average.toPrecision(2) }}\10</h1>
+        <p>({{ movie?.vote_count }} votes)</p>
       </div>
     </div>
     <div class="middle">
-
       <div class="titles">
-        <h1>{{movie?.title}}</h1>
-        <p>Original title: {{movie?.original_title}} ({{movie?.release_date.slice(0, 4)}})</p>
+        <h1>{{ movie?.title }}</h1>
+        <p>
+          Original title: {{ movie?.original_title }} ({{
+            movie?.release_date.slice(0, 4)
+          }})
+        </p>
       </div>
 
       <div class="buttons">
-        <button (click)="playTrailer()">Watch trailer <span class="material-symbols-outlined">play_arrow</span></button>
+        <button (click)="playTrailer()">
+          Watch trailer
+          <span class="material-symbols-outlined">play_arrow</span>
+        </button>
       </div>
 
       <div class="overview">
-        <p>{{movie?.overview}}</p>
+        <p>{{ movie?.overview }}</p>
       </div>
 
       <div class="extraDetails">
@@ -33,20 +44,20 @@
           <h4>Genre</h4>
           <div class="attributes">
             <p class="attribute" *ngFor="let g of movie?.genres">
-               {{g?.name}}
+              {{ g?.name }}
             </p>
           </div>
         </div>
         <div class="table">
           <h4>Country of origin</h4>
           <div>
-            <p>{{movie?.production_countries[0].name}}</p>
+            <p>{{ movie?.production_countries[0].name }}</p>
           </div>
         </div>
         <div class="table">
           <h4>Runtime</h4>
           <div>
-            <p>{{movie?.runtime}} minutes</p>
+            <p>{{ movie?.runtime }} minutes</p>
           </div>
         </div>
       </div>
@@ -57,41 +68,44 @@
           <ng-container *ngIf="providers">
             <div class="buy">
               <h4>Buy</h4>
-                <ng-container *ngIf="providers.buy">
-                  <div *ngFor="let p of providers?.buy">
-                    <img src="https://image.tmdb.org/t/p/original{{p.logo_path}}" alt="">
-                  </div>
-                </ng-container>
-                <ng-container *ngIf="!providers?.buy">
-                  <div>
-                    No provider to buy.
-                  </div>
-                </ng-container>
+              <ng-container *ngIf="providers.buy">
+                <div *ngFor="let p of providers?.buy">
+                  <img
+                    src="https://image.tmdb.org/t/p/original{{ p.logo_path }}"
+                    alt=""
+                  />
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!providers?.buy">
+                <div>No provider to buy.</div>
+              </ng-container>
             </div>
             <div class="rent">
               <h4>Rent</h4>
               <ng-container *ngIf="providers.rent">
                 <div *ngFor="let p of providers.rent">
-                  <img src="https://image.tmdb.org/t/p/original{{p.logo_path}}" alt="">
+                  <img
+                    src="https://image.tmdb.org/t/p/original{{ p.logo_path }}"
+                    alt=""
+                  />
                 </div>
               </ng-container>
               <ng-container *ngIf="!providers.rent">
-                <div>
-                  No provider to rent.
-                </div>
+                <div>No provider to rent.</div>
               </ng-container>
             </div>
             <div class="stream">
               <h4>Stream</h4>
               <ng-container *ngIf="providers.flatrate">
                 <div *ngFor="let p of providers.flatrate">
-                  <img src="https://image.tmdb.org/t/p/original{{p.logo_path}}" alt="">
+                  <img
+                    src="https://image.tmdb.org/t/p/original{{ p.logo_path }}"
+                    alt=""
+                  />
                 </div>
               </ng-container>
               <ng-container *ngIf="!providers.flatrate">
-                <div>
-                  No provider to stream.
-                </div>
+                <div>No provider to stream.</div>
               </ng-container>
             </div>
           </ng-container>
@@ -105,20 +119,24 @@
       <h2>Cast & Crew</h2>
       <div class="castDiv">
         <ng-container *ngIf="cast">
-        <div class="castBox" *ngFor="let c of cast | slice: 0: 5">
-          <img *ngIf="c.profile_path" src="https://image.tmdb.org/t/p/original{{c.profile_path}}" alt="">
-          <img *ngIf="!c.profile_path" src="assets/images/artistPlaceholder.jpg" alt="">
-          <div class="character" [routerLink]="['/artist/'+c.id]">
-            <h3>{{c.name}}</h3>
-            <p>as {{c.character}}</p>
+          <div class="castBox" *ngFor="let c of cast | slice : 0 : 5">
+            <img
+              *ngIf="c.profile_path"
+              src="https://image.tmdb.org/t/p/original{{ c.profile_path }}"
+              alt=""
+            />
+            <img
+              *ngIf="!c.profile_path"
+              src="assets/images/artistPlaceholder.jpg"
+              alt=""
+            />
+            <div class="character" [routerLink]="['/artist/' + c.id]">
+              <h3>{{ c.name }}</h3>
+              <p>as {{ c.character }}</p>
+            </div>
           </div>
-        </div>
         </ng-container>
       </div>
     </div>
-
-
   </div>
 </div>
-
-
