@@ -1,15 +1,15 @@
-<div>
+<div class="livenow-title">
   <h2>Movies now in Cinemas</h2>
 </div>
 
 <div>
-  <div *ngFor="let movie of nowPlaying">
+  <div *ngFor="let movie of nowPlaying" class="livenow-body">
     <img
       src="https://image.tmdb.org/t/p/original{{ movie.backdrop_path }}"
       alt=""
     />
-    <div class="gradient" [routerLink]="['../movie/' + movie.id]">
-      <div class="movieText">
+    <div class="livenow-gradient" [routerLink]="['../movie/' + movie.id]">
+      <div class="movie-text">
         <h1>{{ movie.title }}</h1>
         <p>
           <span class="material-symbols-outlined">event</span>

@@ -1,4 +1,4 @@
-<div class="searchBox">
+<div class="search-box">
   <form
     (submit)="searchResultsTyping()"
     [formGroup]="searchForm"
@@ -17,9 +17,9 @@
 </div>
 
 <div *ngIf="results" class="results">
-  <div class="oneResult" *ngFor="let result of results | slice : 0 : 9">
+  <div class="one-result" *ngFor="let result of results | slice : 0 : 9">
     <ng-container *ngIf="result.media_type === 'movie'">
-      <div class="movieResult" [routerLink]="['/movie/' + result.id]">
+      <div class="movie-result" [routerLink]="['/movie/' + result.id]">
         <img
           *ngIf="result.poster_path"
           src="https://image.tmdb.org/t/p/original{{ result.poster_path }}"
@@ -30,7 +30,7 @@
           src="../../assets/images/posterPlaceholder.jpg"
           alt="movie poster"
         />
-        <div class="gradient">
+        <div class="search-gradient">
           <div class="desc">
             <h2>{{ result.title }}</h2>
           </div>
@@ -38,7 +38,7 @@
       </div>
     </ng-container>
     <ng-container *ngIf="result.media_type === 'tv'">
-      <div class="showResult" [routerLink]="['/show/' + result.id]">
+      <div class="show-result" [routerLink]="['/show/' + result.id]">
         <img
           *ngIf="result.poster_path"
           src="https://image.tmdb.org/t/p/original{{ result.poster_path }}"
@@ -57,7 +57,7 @@
       </div>
     </ng-container>
     <ng-container *ngIf="result.media_type === 'person'">
-      <div class="artistResult" [routerLink]="['/artist/' + result.id]">
+      <div class="artist-result" [routerLink]="['/artist/' + result.id]">
         <img
           *ngIf="result.profile_path"
           src="https://image.tmdb.org/t/p/original{{ result.profile_path }}"

@@ -1,11 +1,11 @@
-<div [@inOutAnimation] class="upcomingAndTop">
+<div [@inOutAnimation] class="upcoming-and-top">
   <div class="upcomingMovies">
-    <div class="titleBar">
+    <div class="title-bar">
       <h2 class="subtitle">UPCOMING MOVIES</h2>
       <button [routerLink]="['../discovery/movies']">MORE</button>
     </div>
     <div
-      class="slideDiv"
+      class="slider-item"
       *ngFor="let u of upcoming | slice : currMovie : currMovie + 1"
       [routerLink]="['/movie/' + u.id]"
     >
@@ -28,12 +28,12 @@
   </div>
 
   <div class="topRatedShows">
-    <div class="titleBar">
+    <div class="title-bar">
       <h2 class="subtitle">POPULAR SHOWS</h2>
       <button [routerLink]="['../discovery/shows']">MORE</button>
     </div>
     <div
-      class="slideDiv"
+      class="slider-item"
       *ngFor="let s of popular | slice : currShow : currShow + 1"
       [routerLink]="['/show/' + s.id]"
     >
@@ -56,9 +56,9 @@
   </div>
 </div>
 
-<div [@inOutAnimation] class="artistsDiv">
+<div [@inOutAnimation] class="artists-div">
   <div class="upcomingMovies">
-    <div class="titleBar">
+    <div class="title-bar">
       <h2 class="subtitle">TRENDING ARTISTS</h2>
       <button [routerLink]="['../artists']">MORE</button>
     </div>
