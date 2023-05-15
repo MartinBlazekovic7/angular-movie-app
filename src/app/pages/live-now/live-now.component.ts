@@ -20,7 +20,6 @@ export class LiveNowComponent implements OnInit {
     this.loaderService.show();
     this.movieService.getNowPlaying().subscribe((response) => {
       this.nowPlaying = response.results;
-      console.log(this.nowPlaying);
     });
     setInterval(() => {
       this.loaderService.hide();

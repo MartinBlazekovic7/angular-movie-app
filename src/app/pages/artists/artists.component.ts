@@ -20,7 +20,6 @@ export class ArtistsComponent implements OnInit {
     this.loaderService.show();
     this.peopleService.getTrending().subscribe((response) => {
       this.popularArtists = response.results;
-      console.log(this.popularArtists);
     });
     setInterval(() => {
       this.loaderService.hide();

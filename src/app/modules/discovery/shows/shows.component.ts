@@ -29,7 +29,6 @@ export class ShowsComponent implements OnInit {
     this.loaderService.show();
     this.showService.getGenres().subscribe((response) => {
       this.genres = response.genres;
-      console.log(this.genres);
     });
     setInterval(() => {
       this.loaderService.hide();

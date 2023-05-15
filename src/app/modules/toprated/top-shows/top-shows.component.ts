@@ -33,7 +33,6 @@ export class TopShowsComponent implements OnInit {
     this.showsService.getTopRated(this.page).subscribe((response) => {
       this.showResponse = response;
       this.shows = this.showResponse.results;
-      console.log(this.shows);
     });
     setInterval(() => {
       this.loaderService.hide();
@@ -45,7 +44,6 @@ export class TopShowsComponent implements OnInit {
     this.showsService.getTopRated(this.page).subscribe((response) => {
       this.showResponse = response;
       this.shows = [...this.shows, ...this.showResponse.results];
-      console.log(this.shows);
     });
   }
 }

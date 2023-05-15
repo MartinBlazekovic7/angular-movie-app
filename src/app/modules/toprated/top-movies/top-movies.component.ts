@@ -33,7 +33,6 @@ export class TopMoviesComponent implements OnInit {
     this.movieService.getTopRated(this.page).subscribe((response) => {
       this.movieResponse = response;
       this.movies = this.movieResponse.results;
-      console.log(this.movies);
     });
     setInterval(() => {
       this.loaderService.hide();
@@ -45,7 +44,6 @@ export class TopMoviesComponent implements OnInit {
     this.movieService.getTopRated(this.page).subscribe((response) => {
       this.movieResponse = response;
       this.movies = [...this.movies, ...this.movieResponse.results];
-      console.log(this.movies);
     });
   }
 }

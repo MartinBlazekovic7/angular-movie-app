@@ -45,10 +45,9 @@ export class SearchComponent implements OnInit {
 
   searchResults() {
     this.query = this.searchForm.value.searchTerm.replace(' ', '%');
-    console.log(this.query);
+
     this.searchService.getResults(this.query).subscribe((response) => {
       this.results = response.results;
-      console.log(this.results);
     });
   }
 

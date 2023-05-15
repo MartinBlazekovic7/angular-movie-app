@@ -67,17 +67,14 @@ export class HomeComponent implements OnInit {
     this.movieService.getUpcoming().subscribe((response) => {
       this.movieResponse = response;
       this.upcoming = this.movieResponse.results;
-      console.log(this.upcoming);
     });
     this.showService.getPopular().subscribe((response) => {
       this.showResponse = response;
       this.popular = this.showResponse.results;
-      console.log(this.popular);
     });
     this.peopleService.getTrending().subscribe((response) => {
       this.peopleResponse = response;
       this.artists = this.peopleResponse.results;
-      console.log(this.artists);
     });
 
     setInterval(() => {
@@ -116,14 +113,10 @@ export class HomeComponent implements OnInit {
     if (this.currPage === 16) {
       this.currPage = 0;
     } else this.currPage = this.currPage + 4;
-
-    console.log(this.currPage);
   }
   prevArtists() {
     if (this.currPage === 0) {
       this.currPage = 16;
     } else this.currPage = this.currPage - 4;
-
-    console.log(this.currPage);
   }
 }
