@@ -1,5 +1,9 @@
 <div class="searchBox">
-  <form (submit)="searchResults()" [formGroup]="searchForm" class="stopForm">
+  <form
+    (submit)="searchResultsTyping()"
+    [formGroup]="searchForm"
+    class="stopForm"
+  >
     <input
       type="text"
       formControlName="searchTerm"

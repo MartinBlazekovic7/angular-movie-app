@@ -37,7 +37,7 @@ export class TopShowsComponent implements OnInit {
     });
     setInterval(() => {
       this.loaderService.hide();
-    }, 2000);
+    }, 1200);
   }
 
   loadMore() {
