@@ -4,7 +4,7 @@
   </div>
   <div *ngIf="shows?.length > 0" class="carousel" #stepCarousel appFlickity>
     <div
-      class="movieBox"
+      class="item-box"
       *ngFor="let show of shows"
       [routerLink]="['/show/' + show.id]"
     >

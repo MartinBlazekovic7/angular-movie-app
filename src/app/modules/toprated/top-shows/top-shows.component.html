@@ -1,9 +1,9 @@
-<nav class="topRatedNavbar">
+<nav class="second-navbar">
   <div [routerLink]="['../movies']">Movies</div>
   <div [routerLink]="['shows']" class="topRatedSelected">Shows</div>
 </nav>
-<div class="topRatedList" [@inOutAnimation]>
-  <div class="topRatedMovie" *ngFor="let show of shows; index as i">
+<div class="toprated-list" [@inOutAnimation]>
+  <div class="toprated-item" *ngFor="let show of shows; index as i">
     <img
       src="https://image.tmdb.org/t/p/original{{ show.poster_path }}"
       alt=""
@@ -17,8 +17,8 @@
     </div>
   </div>
 </div>
-<div class="buttonDiv">
-  <button class="redButton" (click)="loadMore()">SHOW MORE</button>
+<div class="button-div">
+  <button class="red-button" (click)="loadMore()">SHOW MORE</button>
 </div>
 <app-loader
   [overlayColor]="'#1f2326'"

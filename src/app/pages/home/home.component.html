@@ -67,7 +67,7 @@
     <div *ngIf="artists?.length > 0" class="carousel" #stepCarousel appFlickity>
       <div
         *ngFor="let a of artists"
-        class="movieBox"
+        class="item-box"
         [routerLink]="['../artist/' + a.id]"
       >
         <img

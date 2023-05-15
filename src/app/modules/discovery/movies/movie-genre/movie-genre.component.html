@@ -5,7 +5,7 @@
   <div *ngIf="movies?.length > 0" class="carousel" #stepCarousel appFlickity>
     <div
       *ngFor="let movie of movies"
-      class="movieBox"
+      class="item-box"
       [routerLink]="['/movie/' + movie.id]"
     >
       <img
