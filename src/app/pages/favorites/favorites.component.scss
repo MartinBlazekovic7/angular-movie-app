@@ -1,0 +1,40 @@
+.container {
+  font-family: "Quicksand Light", sans-serif;
+  color: #fbfbf2;
+  display: flex;
+  font-display: row;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.fav-movies,
+.fav-shows {
+  width: 50%;
+  text-align: center;
+}
+.fav-movie,
+.fav-show {
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 300px;
+    margin: 12px auto;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+  .fav-movies,
+  .fav-shows {
+    width: 100%;
+  }
+}

@@ -474,3 +474,14 @@
 
 // *************************************************************
 // ** FAVORITES PAGE **
+
+.flickity-page-dot {
+  background-color: #fbfbf280 !important;
+}
+.flickity-page-dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #fd515a !important;
+}
+.flickity-page-dot.is-selected {
+  background: #fbfbf2 !important;
+}

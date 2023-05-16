@@ -1,4 +1,42 @@
-<p>favorites works!</p>
+<div class="livenow-title">
+  <h2>My Favorites Library</h2>
+</div>
+
+<div class="container">
+  <div class="fav-movies">
+    <h2>Movies</h2>
+    <div class="fav-movie" *ngFor="let movie of movies">
+      <img
+        *ngIf="movie.poster_path"
+        src="https://image.tmdb.org/t/p/original{{ movie.poster_path }}"
+        alt=""
+      />
+      <img
+        id="placeholder"
+        *ngIf="!movie.poster_path"
+        src="../../../../assets/images/posterPlaceholder.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="fav-shows">
+    <h2>Shows</h2>
+    <div class="fav-show" *ngFor="let show of shows">
+      <img
+        *ngIf="show.poster_path"
+        src="https://image.tmdb.org/t/p/original{{ show.poster_path }}"
+        alt=""
+      />
+      <img
+        id="placeholder"
+        *ngIf="!show.poster_path"
+        src="../../../../assets/images/posterPlaceholder.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
 <app-loader
   [overlayColor]="'#1f2326'"
   [loaderText]="'Please wait...'"

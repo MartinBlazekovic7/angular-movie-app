@@ -4,9 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { ShowDetails, ShowTrailer } from '../../other/model/show.model';
 import {
   CastPerson,
-  Provider,
   ProviderOptions,
+  Provider,
 } from '../../other/model/movie.model';
+import { Favorites } from '../../other/model/favorites.model';
 
 @Component({
   selector: 'app-show-details',
@@ -25,6 +26,14 @@ export class ShowDetailsComponent implements OnInit {
   providers: ProviderOptions;
   providersList: Provider[] = [];
 
+  favorites: Favorites = {
+    movies: [],
+    shows: [],
+    artists: [],
+  };
+
+  isFavoritedBoolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private showService: ShowsService
@@ -35,6 +44,12 @@ export class ShowDetailsComponent implements OnInit {
 
     this.showService.getDetails(this.showId).subscribe((response) => {
       this.show = response;
+      if (localStorage.getItem('favorites')) {
+        this.favorites = JSON.parse(localStorage.getItem('favorites'));
+        this.isFavorited();
+      } else {
+        localStorage.setItem('favorites', JSON.stringify(this.favorites));
+      }
     });
 
     this.showService.getTrailer(this.showId).subscribe((response) => {
@@ -56,5 +71,28 @@ export class ShowDetailsComponent implements OnInit {
 
   playTrailer() {
     window.open(this.trailerLink, '_blank');
+  }
+
+  favorite() {
+    this.favorites.shows.push(this.show);
+    localStorage.setItem('favorites', JSON.stringify(this.favorites));
+    this.isFavorited();
+  }
+  unfavorite() {
+    this.favorites.shows = this.favorites.shows.filter(
+      (m) => m.id !== this.show.id
+    );
+    localStorage.setItem('favorites', JSON.stringify(this.favorites));
+    this.isFavorited();
+  }
+
+  isFavorited() {
+    this.isFavoritedBoolean = false;
+    for (let i = 0; i < this.favorites.shows.length; i++) {
+      if (this.favorites.shows[i].id === this.show?.id) {
+        this.isFavoritedBoolean = true;
+        break;
+      }
+    }
   }
 }
