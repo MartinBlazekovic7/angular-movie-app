@@ -459,17 +459,12 @@
 // ** ARTISTS PAGE **
 
 .artist-grid {
+  width: 95%;
+  margin: 0 auto 24px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.artist-card {
-  width: 20%;
-  margin: 12px 2.5%;
-  img {
-    width: 100%;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 // *************************************************************

@@ -1,9 +1,27 @@
 <div class="artist-grid">
-  <div class="artist-card" *ngFor="let artist of popularArtists">
+  <div class="artist-card" *ngFor="let artist of popularArtists; index as i">
     <img
+      *ngIf="artist.profile_path"
       src="https://image.tmdb.org/t/p/original{{ artist.profile_path }}"
-      alt=""
+      alt="itemPoster"
     />
+    <img
+      *ngIf="!artist.profile_path"
+      src="../../../assets/images/artistPlaceholder.jpg"
+      alt="itemPoster"
+    />
+    <div>
+      <h2>
+        {{ artist.name }}
+      </h2>
+      <i>
+        {{ popularArtistsDetails[i]?.birthday }}
+        <span *ngIf="popularArtistsDetails[i].deathday">
+          - {{ popularArtistsDetails[i].deathday }}</span
+        ></i
+      >
+      <p>{{ popularArtistsDetails[i]?.place_of_birth }}</p>
+    </div>
   </div>
 </div>
 <app-loader
